@@ -52,13 +52,13 @@ action:
       args: '{{ trigger.event.data.args }}'
   - choose:
       - conditions:
-          - "{{ button == 1 and cmd == 'on' }}"
+          - "{{ cmd == 'on' }}"
         sequence: !input "on_button_1_short"
       - conditions:
-          - "{{ button == 1 and cmd == 'off' }}"
+          - "{{ cmd == 'off' }}"
         sequence: !input "off_button_1_short"
       - conditions:
-          - "{{ button == 1 and cmd == 'move_with_on_off' }}"
+          - "{{ cmd == 'move_with_on_off' }}"
         sequence:
           - if:
               - condition:
