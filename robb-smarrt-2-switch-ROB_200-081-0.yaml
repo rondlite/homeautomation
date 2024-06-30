@@ -75,7 +75,7 @@ action:
           - "{{ button == 1 and cmd == 'on' }}"
         sequence: !input "on_button_1_short"
       - conditions:
-          - "{{ (button == 1 and cmd == 'off' }}"
+          - "{{ button == 1 and cmd == 'off' }}"
         sequence: !input "off_button_1_short"
       - conditions:
           - "{{ button == 1 and cmd == 'move_with_on_off' }}"
