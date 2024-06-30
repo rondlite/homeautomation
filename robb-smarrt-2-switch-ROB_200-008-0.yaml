@@ -1,7 +1,7 @@
 blueprint:
-  name: Robb smarrt 4-button switch
+  name: Robb smarrt 2-button switch
   description:  |
-    This blueprint is for the  Robb smarrt 4-button switch panel (ROBB ROB_200-008-0) when used with zha.
+    This blueprint is for the  Robb smarrt 2-button switch panel (ROBB ROB_200-081-0) when used with zha.
     It is for general use so all buttons can be connected to any action of your choice. This remote supports short button clicks and long button presses (over 4 seconds)
     Make sure to select the correct sensor for the remote.
   domain: automation
@@ -13,7 +13,7 @@ blueprint:
       selector:
         device:
           integration: zha
-          model: "ROB_200-008-0"
+          model: "ROB_200-081-0"
           
     on_button_1_short:
       name: On button 1 - short
