@@ -72,10 +72,10 @@ action:
       args: '{{ trigger.event.data.args }}'
   - choose:
       - conditions:
-          - "{{ button == 1 and cmd == 'on' }}"
+          - "{{ (button == 1 or button == 2) and cmd == 'on' }}"
         sequence: !input "on_button_1_short"
       - conditions:
-          - "{{ button == 1 and cmd == 'off' }}"
+          - "{{ (button == 1 or button == 2) and cmd == 'off' }}"
         sequence: !input "off_button_1_short"
       - conditions:
           - "{{ button == 1 and cmd == 'move_with_on_off' }}"
@@ -89,13 +89,13 @@ action:
                 !input "off_button_1_long"
 
       - conditions:
-          - "{{ button == 2 and cmd == 'on' }}"
+          - "{{ (button == 3 or button == 4) and cmd == 'on' }}"
         sequence: !input "on_button_2_short"
       - conditions:
-          - "{{ button == 2 and cmd == 'off' }}"
+          - "{{ (button == 3 or button == 4) and cmd == 'off' }}"
         sequence: !input "off_button_2_short"
       - conditions:
-          - "{{ button == 2 and cmd == 'move_with_on_off' }}"
+          - "{{ button == 3 and cmd == 'move_with_on_off' }}"
         sequence:
           - if:
               - condition:
